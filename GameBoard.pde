@@ -1,8 +1,10 @@
+//Adding a comment to code
 Board theBoard;
 BoardItem item1;
 TriangleItem tItem1;
 Sticky stickGuy;
 
+//Layer background data
 int[][] layer = {
   {0, 255, 125, 9, 10, 15, 24, 45, 150}, 
   {100, 100, 100, 9}, 
@@ -10,6 +12,7 @@ int[][] layer = {
   {#8F2CB7}
 };
 
+//Setup our gameboard
 void setup() {
   size(1600, 1200);
   int cellSize = 100;
