@@ -51,6 +51,12 @@ public class BoardItem {
        rowId += by;
   }
   
-  
+  public Cell[] getVangaurd( char direction ){
+     ArrayList<Cell> result = new ArrayList<Cell>();
+     result.add(new Cell(1,1));
+     result.add(new Cell(2,1));
+     result.add(new Cell(3,1));
+     return result.toArray(new Cell[0]);
+  }
   
 }

@@ -14,7 +14,7 @@ int[][] layer = {
 
 //Setup our gameboard
 void setup() {
-  size(1600, 1200);
+  size(1200, 600);
   int cellSize = 100;
   int boardCols = (width-100)/cellSize;
   int boardRows = (height-100)/cellSize;
@@ -22,18 +22,19 @@ void setup() {
 
   item1 = new BoardItem(2, 5);
   int[][] item1Data = 
-   {{-1, 0, -1}, 
-    { 0, 0, 0}, 
-    {-1, 0, -1}};
+    {{-1, 0, -1}, 
+     { 0, 0, 0}, 
+     {-1, 0, -1}};
+    
   item1.setData(item1Data);
   //theBoard.addItem( item1 );
   theBoard.addLayer( layer );
-  
-  tItem1 = new TriangleItem(1,1);
+
+  tItem1 = new TriangleItem(1, 1);
   tItem1.setData(item1Data);
   theBoard.addItem(tItem1);
-  
-  stickGuy = new Sticky(7,7);
+
+  stickGuy = new Sticky(3, 7);
   theBoard.addItem(stickGuy);
 }
 
@@ -50,10 +51,11 @@ void mousePressed() {
 }
 
 void keyPressed() {
-  
+
   if (key == CODED) {
     if (keyCode == UP) {
       doUpKey();
+      println(item1.getVangaurd('u'));
     } else if (keyCode == DOWN) {
       doDownKey();
     } else if (keyCode == LEFT) {
@@ -64,22 +66,22 @@ void keyPressed() {
   }
 }
 
-void doUpKey(){
+void doUpKey() {
   item1.updateRow(-1);
   tItem1.updateRow(-1);
 }
 
-void doDownKey(){
+void doDownKey() {
   item1.updateRow(1);
   tItem1.updateRow(1);
 }
 
-void doLeftKey(){
+void doLeftKey() {
   item1.updateCol(-1);
   tItem1.updateCol(-1);
 }
 
-void doRightKey(){
+void doRightKey() {
   item1.updateCol(1);
   tItem1.updateCol(1);
 }

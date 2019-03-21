@@ -15,7 +15,8 @@ public class Sticky extends BoardItem {
       line( cellSize/2, 2*cellSize/3, cellSize/2, cellSize/4);
       
       //head
-      ellipse(cellSize/2, cellSize/4, .0010*cellSize*frameCount,.001*cellSize*frameCount);
+      float r = .2;
+      ellipse(cellSize/2, cellSize/4, r*cellSize,r*cellSize);
       
       //arms
       line( cellSize/4, cellSize/2, 3*cellSize/4, cellSize/2);
